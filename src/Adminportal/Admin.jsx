@@ -10,6 +10,8 @@ import "./Admin.css";
 import axios from "axios";
 import AdminHeader from "./Admins/AdminHeader/AdminHeader.jsx";
 
+const apiUrl = process.env.REACT_APP_PORT;
+
 const Admin = ({ toggleSidebar, isSidebarOpen }) => {
   const [hotelName, setHotelName] = useState("");
   const [isHotelName, setIsHotelName] = useState(false);
@@ -166,7 +168,7 @@ const Admin = ({ toggleSidebar, isSidebarOpen }) => {
     };
 
     try {
-      const response = await fetch("http://localhost:4500/admin/addrestraunt", {
+      const response = await fetch(`${apiUrl}/admin/addrestraunt`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

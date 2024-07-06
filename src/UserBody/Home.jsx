@@ -5,12 +5,14 @@ import Card from './Card/Card.jsx'
 import Chooseus from './Home-Banner/Chooseus.jsx';
 import { useNavigate } from 'react-router-dom';
 
+const apiUrl = process.env.REACT_APP_PORT;
+
 function Home() {
     const[resCol, setResCol]= useState([]);
     const navigate = useNavigate();
     const resData = async()=>{
         try {
-            const response = await fetch("http://localhost:4500/getAllRes", {
+            const response = await fetch(`${apiUrl}/getAllRes`, {
               method: "GET"
             });
     

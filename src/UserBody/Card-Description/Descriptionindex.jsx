@@ -10,6 +10,8 @@ import Photos from './Restaurantsdetails/Restaurantbottom/Bottomlinks/Photos.jsx
 import Menu from './Restaurantsdetails/Restaurantbottom/Bottomlinks/Menu.jsx';
 import BookTable from './Restaurantsdetails/Restaurantbottom/Bottomlinks/BookTable.jsx';
 
+const apiUrl = process.env.REACT_APP_PORT;
+
 const Descriptionindex = () => {
   
   const [resData, setResData] = useState({});
@@ -18,7 +20,7 @@ const Descriptionindex = () => {
   console.log(restaurantName);
   const sendRequestToBackend = async () => {
     try {
-      const response = await fetch(`http://localhost:4500/admin/getResData/${restaurantName}`, {
+      const response = await fetch(`${apiUrl}/admin/getResData/${restaurantName}`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
