@@ -1,0 +1,74 @@
+.card {
+  margin: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 6px 18px -9px rgba(0, 0, 0, 0.75);
+  transition: transform 100ms ease-in;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+.card:hover {
+  transform: scale(1.07);
+}
+
+.card > img {
+  object-fit:cover;
+  min-width: 300px;
+  min-height: 200px;
+  width: 100%;
+}
+.card-location{
+  font-weight: 100;
+  color: rgb(129, 130, 131);
+}
+
+.card-km{
+  font-weight: 600;
+}
+
+.card__info {
+  padding: 20px;
+  /* padding-left: 20px;
+  padding-right: 20px; */
+}
+
+.card__info h2 {
+  /* margin-bottom: 10px; */
+  font-size: 1.5rem;
+}
+
+.card__info h4 {
+  /* margin-bottom: 5px; */
+  color: black;
+}
+
+  .card-img{
+    border-radius: 10px;
+  }
+  .card-section {
+    font-weight: 300;
+    font-family: Okra, Helvetica, sans-serif;
+    cursor: pointer;
+    box-sizing: inherit;
+    -webkit-tap-highlight-color: transparent;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    line-height: 0.01rem;
+
+  }
+  .card__opentime{
+    font-family: Okra, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #FF7E8B;
+  }
+  .card__closetime{
+    font-family: Okra, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #257E3E
+  }
